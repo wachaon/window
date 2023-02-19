@@ -1,0 +1,23 @@
+{
+  "name": "window",
+  "version": "0.0.2",
+  "description": "control window with wsh",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "wes bundle ./src/compile.js ./src/window.cs ./usage.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wachaon/window.git"
+  },
+  "keywords": [
+    "wsh",
+    "window"
+  ],
+  "author": "wachaon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wachaon/window/issues"
+  },
+  "homepage": "https://github.com/wachaon/window#readme"
+}
