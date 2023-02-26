@@ -1,6 +1,6 @@
 {
   "name": "window",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "control window with wsh",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/wachaon/window/issues"
   },
-  "homepage": "https://github.com/wachaon/window#readme"
+  "homepage": "https://github.com/wachaon/window#readme",
+  "wes": {
+    "dependencies": {
+      "csharpscript": "0.0.4"
+    }
+  }
 }
