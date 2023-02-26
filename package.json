@@ -1,10 +1,10 @@
 {
   "name": "window",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "control window with wsh",
   "main": "index.js",
   "scripts": {
-    "bundle": "wes bundle ./src/compile.js ./src/window.cs ./usage.js"
+    "bundle": "wes bundle ./src/window.cs ./usage.js"
   },
   "repository": {
     "type": "git",
