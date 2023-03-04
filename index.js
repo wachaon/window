@@ -85,11 +85,6 @@ function title() {
 }
 
 if (isCLI(__filename)) {
-    console.log(__filename)
-    console.log(() => argv.get('compile'))
-    console.log(() => window_cs)
-    console.log(() => window_exe)
-    console.log(() => compile)
     if (argv.get('c') || argv.get('compile') || argv.unnamed[1] === 'compile') console.log(compile(window_cs, { out: window_exe }))
 } else module.exports = {
     move,
