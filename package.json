@@ -1,6 +1,6 @@
 {
   "name": "window",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "control window with wsh",
   "main": "index.js",
   "scripts": {
