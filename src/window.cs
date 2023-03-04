@@ -51,7 +51,7 @@ public class window {
             bool flag = GetWindowRect(hWnd, out rect);
 
             if (args.Length == 1) {
-                Console.WriteLine("left {0}", rect.left);
+                Console.WriteLine("left: {0}", rect.left);
             } else {
                 return Int32.Parse(rect.left.ToString());
             }
@@ -117,6 +117,15 @@ public class window {
                 SetActiveWindow(hwnd);
             }
         }
+
+        if (method === "title") {
+            IntPtr hwnd = GetForegroundWindow();
+            const int nChars = 256;
+            System.Text.StringBuilder Buff = new System.Text.StringBuilder(nChars);
+            if (GetWindowText(hWnd, Buff, nChars) > 0) {
+                Console.WriteLine(Buff.ToString());
+            }
+        }
         return 0;
     }
 
@@ -141,6 +150,8 @@ public class window {
     [DllImport("user32.dll")]
     static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
+    [DllImport("user32.dll")]
+    static extern int GetWindowText(IntPtr hWnd, System.Text.StringBuilder lpWindowText, int nMaxCount);
 
     [StructLayout(LayoutKind.Sequential)]
     private struct RECT {

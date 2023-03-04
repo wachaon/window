@@ -79,6 +79,11 @@ function activateHandle(hWnd) {
     else execScript(window_cs, window, Main, 'activateHandle', hWnd, 0, 0, 0)
 }
 
+function title() {
+    if (exists_window_exe) execCommand(`${window_exe} title`)
+    else execScript(window_cs, window, Main, 'title', 0, 0, 0, 0)
+}
+
 if (isCLI(__filename)) {
     if (argv.get('c') || argv.get('compile') || argv.unnamed[1] === 'compile') compile(window_cs, { out: window_exe })
 } else module.exports = {
@@ -93,5 +98,6 @@ if (isCLI(__filename)) {
     min,
     normal,
     activateTitle,
-    activateHandle
+    activateHandle,
+    title
 }
