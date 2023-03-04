@@ -80,8 +80,8 @@ function activateHandle(hWnd) {
 }
 
 function title() {
-    if (exists_window_exe) execCommand(`${window_exe} title`)
-    else execScript(window_cs, window, Main, 'title', 0, 0, 0, 0)
+    if (exists_window_exe) return execCommand(`${window_exe} title`)
+    else return execScript(window_cs, window, Main, 'title', 0, 0, 0, 0)
 }
 
 if (isCLI(__filename)) {
