@@ -118,7 +118,7 @@ public class window {
             }
         }
 
-        if (method === "title") {
+        if (method == "title") {
             IntPtr hwnd = GetForegroundWindow();
             const int nChars = 256;
             System.Text.StringBuilder Buff = new System.Text.StringBuilder(nChars);
